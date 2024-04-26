@@ -2,6 +2,8 @@
 
 Nessa demo, fiz 2 aplicações API, como se fosse 2 Microserviços. 
 
+Caso queira, você pode testar no docker localmente.
+
 Caso de uso:
 
 > Gerar a imagem docker das apicações.
