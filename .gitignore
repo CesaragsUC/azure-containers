@@ -6,3 +6,7 @@
 /microservices/bin/Debug
 /microservices/src/microservice01/bin/Debug/net8.0
 /microservices/src/microservice02/bin/Debug/net8.0
+*.txt
+/microservices/src/microservice02/obj
+/microservices/obj
+/microservices/src/microservice01/obj
