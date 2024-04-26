@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+
+    microservice-01:
+        image: cesarags/microservice01:latest
+        container_name: microservice-01
+        build:
+            context: ../src/microservice01
+            dockerfile: ./Dockerfile
+        ports:
+            - "5045:5045"
+        environment:
+            - aspnetcore_environment=Production
+            - aspnetcore_urls=http://+:5045
+
+    microservice-02:
+        image: cesarags/microservice02:latest
+        container_name: microservice-02
+        build:
+            context: ../src/microservice02
+            dockerfile: ./Dockerfile
+        ports:
+            - "5168:5168"
+        environment:
+            - aspnetcore_environment=Production
+            - aspnetcore_urls=http://+:5168
+            
+            
+    redis:
+        image: redis:latest
+        container_name: redis
+        restart: always
+        ports:
+          - "6379:6379"     
